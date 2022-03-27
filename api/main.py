@@ -29,7 +29,7 @@ def new_image():
 	}
 	response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
 	data = response.json()
-	return {"data": data}
+	return data
 
 if __name__ == "__main__":
-	app.run(port=5000)
+	app.run(host="0.0.0.0", port=5050)
